@@ -65,15 +65,16 @@ int main() {
         }
     }
 
-    if (n > 0) { //กันมีนเอาไปหาร 0 แบบข้อมูลนี้ว่างไรเงี้ย
+    if (n > 0) { //กันมันเอาไปหาร 0 แบบข้อมูลนี้ว่างไรเงี้ย
         double mean = sum / n; // แก้จาก 1.0 / n * sum เพื่อให้เข้าใจง่ายขึ้น
         double SD = sqrt((sum_2 / n) - pow(mean, 2)); // แก้ให้เข้าใจง่ายขึ้นจากอันเดิม
         cout << "Number of data = " << n << endl;
-        cout << fixed << setprecision(3) // เพิ่ม fixed ละอันที่แล้วลืม
+        cout << setprecision(3) // เพิ่ม fixed ถ้าจะปัดแต่ในนี้ไม่ต้อง
              << "Mean = " << mean << endl
              << "Standard deviation = " << SD << endl;
     } else {
         cout << "No valid data found.\n";
     }
 }
+
 
